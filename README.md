@@ -9,9 +9,9 @@ The signup API allows users to sign up with a valid email and password. An optio
 4. Tested API's with Postman 
 
 **JWt-Auth end-to-end :**
-*/api/user/signup - registers a new user
-*/api/user/login - returns accessToken and refreshToken
-*/api/user/me - validates the token and gives back user info
+* /api/user/signup - registers a new user
+* /api/user/login - returns accessToken and refreshToken
+* /api/user/me - validates the token and gives back user info
 
 
 
