@@ -14,16 +14,22 @@ model User {
   name      String
   email     String    @unique
   password  String
-  bookings  Booking[] @relation("UserBookings")
+  bookings  Order[] @relation("UserOrders")
   createdAt DateTime  @default(now())
+  
+  @@map("users") 
+
 }
 
-model Booking {
+
+model Order {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   userId    String   @db.ObjectId
-  user      User     @relation("UserBookings", fields: [userId], references: [id])
+  user      User     @relation("UserOrders", fields: [userId], references: [id])
   date      DateTime
   service   String
   status    String
   createdAt DateTime @default(now())
+   
+  @@map("orders")
 }
