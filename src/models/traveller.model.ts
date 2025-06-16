@@ -15,4 +15,5 @@ const TravellerSchema = new Schema<ITraveller>({
 });
 
 const Traveller = mongoose.models.Traveller || mongoose.model<ITraveller>('Traveller', TravellerSchema);
+
 export default Traveller;

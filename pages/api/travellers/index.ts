@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import Traveller from '@models/traveller.model';
+import Traveller from '@/models/traveller.model';
 import dbConnect from '@lib/dbConnect';
 import { requireUser } from '@lib/middleware/requireUser';
 import mongoose from 'mongoose';
