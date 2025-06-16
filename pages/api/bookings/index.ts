@@ -1,4 +1,4 @@
+import createTravellerHandler from '@/modules/travellers/api/createTraveller.handler';
 import { requireUser } from '@/lib/middleware/requireUser';
-import getBookingsHandler from '@/modules/bookings/api/getBookings.handler';
 
-export default requireUser(getBookingsHandler);
+export default requireUser(createTravellerHandler);
