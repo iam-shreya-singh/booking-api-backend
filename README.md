@@ -13,5 +13,6 @@ The signup API allows users to sign up with a valid email and password. An optio
 * /api/user/login - returns accessToken and refreshToken
 * /api/user/me - validates the token and gives back user info
 
-
+pages/api :  route entry points
+src/modules, src/lib : logic
 
