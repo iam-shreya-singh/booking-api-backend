@@ -18,16 +18,13 @@ export default async function getBookingsHandler(req: NextApiRequest, res: NextA
   const today = new Date();
 
   try {
-    const bookings = await prisma.booking.findMany({
-      where: {
-        userId,
-        date: status === 'upcoming'
-          ? { gte: today }
-          : { lt: today },
-      },
-      orderBy: { date: 'asc' },
-    });
-
+    const bookings = await prisma.order.findMany({
+  where: {
+    userId,
+    date: status === 'upcoming' ? { gte: today } : { lt: today },
+  },
+  orderBy: { date: 'asc' },
+});
     return res.status(200).json({ bookings });
   } catch (err) {
     console.error('Booking fetch error:', err);
